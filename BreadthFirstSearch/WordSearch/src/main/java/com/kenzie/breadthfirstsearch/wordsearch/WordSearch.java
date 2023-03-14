@@ -15,6 +15,8 @@ public class WordSearch {
     private final char[][] pattern;
     private final List<String> wordsToFind;
 
+    private final char[][] grid;
+
     /**
      * Create a new Word Search.
      *
@@ -28,6 +30,7 @@ public class WordSearch {
         this.height = height;
         this.pattern = pattern;
         this.wordsToFind = wordsToFind;
+        this.grid = getGrid();
     }
 
     public int getWidth() {
@@ -61,6 +64,9 @@ public class WordSearch {
         }
 
         return pattern[row][column];
+    }
+    public char[][] getGrid() {
+        return grid;
     }
 
     @Override
